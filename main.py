@@ -3,14 +3,19 @@
 from art import logo
 
 
-print(logo)
+print(f"{logo} \n \n")
 name = input("What is your name? ")
-bid = input("What is your Bid? ")
+bid = int(input("What is your bid? "))
+auction = True
+while auction:
+    bidder_dictionary = {"name": name, "bid": bid}
+    additional_bidders = input("Are there any other bidders? Type 'yes' or 'no' ")
+    if additional_bidders == 'no':
+        print(f"The winner is {bidder_dictionary['name']} with a bid of {bidder_dictionary['bid']} \n \n")
+    auction = False
 
-def get_bidder(name, bid):
-    bidder_dictionary = {}
-    bidder_dictionary["name"] = name
-    bidder_dictionary["bid"] = bid
+print(bidder_dictionary)
 
-get_bidder(name, bid)
+
+# add_bidder(name, bid)
 
