@@ -20,12 +20,11 @@ while auction:
         auction
     else:
         max_bid = 0
-        for item in bidder_list:
-            if item['bid'] > max_bid:
-                max_bid = (item['bid'])
-            # print(max_bid)
-
-        print(f"The winner is {bidder_list[0]['name']} with a bid of ${max_bid}")
+        for bidder in bidder_list:
+            if bidder['bid'] > max_bid:
+                max_bid = (bidder['bid'])
+                winner = (bidder['name'])
+        print(f"The winner is {winner} with a bid of ${max_bid}")
         auction = False
 
 
