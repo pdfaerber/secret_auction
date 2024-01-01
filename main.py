@@ -19,6 +19,8 @@ while auction:
     if additional_bidders == 'yes':
         auction
     else:
+        for item in bidder_list:
+            print(item['bid'])
         print(f"The winner is {bidder_list[0]['name']} with a bid of ${bidder_list[0]['bid']}")
         auction = False
 
